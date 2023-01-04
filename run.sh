@@ -1,6 +1,7 @@
 #! /bin/bash
 
 CYAN='\033[1;36m'
+GREEN='\033[1;32m'
 NC='\033[0m'
 
 title() {
@@ -9,7 +10,7 @@ title() {
 }
 
 progress() {
-  echo -e "\\n${CYAN}⬢ ${1}${NC}"
+  echo -e "\\n${GREEN}⬢ ${1}${NC}"
 }
 
 
