@@ -37,7 +37,7 @@ tools=(
 
 title "Installing necessary tools..."
 
-for pkg in "${desktop[@]}"; do
+for pkg in "${tools[@]}"; do
   pkg_name=$(echo "$pkg" | awk '{print $1}')
   progress "Installing $pkg_name"
   apt install "$pkg" -y > /dev/null
