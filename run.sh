@@ -38,10 +38,11 @@ tools=(
 
 title "Installing necessary tools..."
 
-for pkg in "${tools[@]}"; do
-  pkg_name=$(echo "$pkg" | awk '{print $1}')
-  progress "Installing $pkg_name"
-  apt install "$pkg" -y > /dev/null
+for i in "${!tools[@]}"; do
+  pkg_name=${tools[$i]}
+  echo "$i - Installing $pkg_name ..."
+  apt install "$pkg_name" -y > /dev/null
+  echo -e "Done \n"
 done
 
 
@@ -59,7 +60,7 @@ if [ -f "$FILE" ]; then
   if [[ $DOMAIN != "" ]]; then
     sed -i "s/server_name _;/server_name $DOMAIN;/" $FILE
   else 
-    echo "You intered nothing, please try again"
+    echo "You intered nothing, please try again!"
     exit 0;
   fi
 
