@@ -73,6 +73,8 @@ speed() {
     speed_test '' 'Speedtest.net'
     speed_test '37535' 'Mazandaran, Iran (Irancell)'
     speed_test '34227' 'Tehran, Iran (SepidVAS)'
+    speed_test '18511' 'Karaj, Iran (MCI) '
+    speed_test '31909' 'Tehran, Iran (Parsdev) '
     speed_test '21541' 'Los Angeles, US'
     speed_test '43860' 'Dallas, US'
     speed_test '40879' 'Montreal, CA'
