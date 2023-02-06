@@ -1,0 +1,22 @@
+services:
+  xray:
+    image: teddysun/xray
+    ports:
+      - "443:443/tcp"
+      - "443:443/udp"
+    volumes:
+      - /etc/xray:/etc/xray:ro
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+  nginx:
+    image: nginx:alpine
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
