@@ -1,6 +1,6 @@
 #!/bin/bash
 
-installTools() {
+installPackages() {
   tools=(
     wget
     curl
