@@ -7,7 +7,7 @@ _printIntro() {
 }
 
 _import() {
-  source "$1"
+  source ".$1"
 }
 
 _exists() {

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-_import "./docker.sh"
-_import "./packages.sh"
+_import "/install/docker.sh"
+_import "/install/packages.sh"
 
 install() {
   installPackages
