@@ -15,13 +15,13 @@ checkUser() {
 }
 
 installXrayConfig() {
-  local xrayConfigFile="./configs/config.json"
+  local xrayConfigFile="./configs/xray-config.json"
   if [[ -f "$xrayConfigFile" ]]; then
     mkdir -p /etc/xray
-    cp $xrayConfigFile /etc/xray
+    cp $xrayConfigFile /etc/xray/config.json
     _green "Installing xray config was successful"
   else
-    _red "Missing config.json file for xray! :("
+    _red "Missing xray-config.json file! :("
     exit 0
   fi
 }
