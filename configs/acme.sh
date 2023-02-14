@@ -4,7 +4,7 @@ export DOMAIN=
 
 export EMAIL=
 
-# certificate file path with name. default: /root
+# certificate file path with name. default: /etc/xray/certs
 export CERTS_PATH=
 
 # certificate file name. default: cert.crt

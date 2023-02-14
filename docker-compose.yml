@@ -5,7 +5,7 @@ services:
       - "443:443/tcp"
       - "443:443/udp"
     volumes:
-      - /etc/xray:/etc/xray:ro
+      - /etc/xray:/etc/xray
     deploy:
       restart_policy:
         condition: on-failure
