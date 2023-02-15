@@ -53,3 +53,7 @@ _warn() {
 _error() {
   _red "$1\n"
 }
+
+_success() {
+  _green "$1\n"
+}

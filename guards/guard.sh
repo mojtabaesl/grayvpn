@@ -2,7 +2,7 @@
 
 checkPackageManager() {
   if ! _exists apt-get; then
-    _red "\nThis script needs debian based distro with 'apt' package manager!\n"
+    _error "\nThis script needs debian based distro with 'apt' package manager!"
     exit 0
   fi
 }
