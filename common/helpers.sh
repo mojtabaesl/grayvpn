@@ -41,3 +41,11 @@ _blue() {
 _neutral() {
   printf "$1"
 }
+
+_option() {
+  _neutral "$(_blue $1) - $2\n"
+}
+
+_warn() {
+  _yellow "$1\n"
+}
