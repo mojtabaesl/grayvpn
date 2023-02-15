@@ -7,13 +7,6 @@ checkPackageManager() {
   fi
 }
 
-checkUser() {
-  if [[ $USER != "root" ]]; then
-    _red "Please login as root user!"
-    exit 0
-  fi
-}
-
 checkENV() {
 
   if [[ $EMAIL == "" ]]; then
@@ -70,15 +63,4 @@ confirmENV() {
     _yellow "See you later! (o_O)"
     exit 0
   fi
-}
-
-guard() {
-  _emptyRow
-  checkUser
-  checkPackageManager
-  checkENV
-  _line
-  printENV
-  _emptyRow
-  confirmENV
 }

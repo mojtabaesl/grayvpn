@@ -1,12 +1,12 @@
 #!/bin/bash
 
 _import "/install/index.sh"
-_import "/guards/guard.sh"
+_import "/guards/index.sh"
 _import "/utils/getCertificate.sh"
 _import "/commands/install-xray-config.sh"
 
-_cmd-install() {
-  guard
+_run() {
+  _guard
   _line
   install
   _line

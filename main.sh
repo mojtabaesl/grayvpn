@@ -2,7 +2,7 @@
 source "$(dirname "$BASH_SOURCE")/common/helpers.sh"
 
 _import "/configs/acme.sh"
-_import "/commands/install.sh"
+_import "/commands/run.sh"
 _import "/commands/install-xray-config.sh"
 
 _printIntro
@@ -23,7 +23,7 @@ case "${OPTION_NUMBER}" in
   exit 0
   ;;
 1)
-  _cmd-install
+  _run
   ;;
 2)
   _install-xray-config

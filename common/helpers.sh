@@ -49,3 +49,7 @@ _option() {
 _warn() {
   _yellow "$1\n"
 }
+
+_error() {
+  _red "$1\n"
+}
