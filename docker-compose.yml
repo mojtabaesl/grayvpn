@@ -8,15 +8,9 @@ services:
       - /etc/xray:/etc/xray
     deploy:
       restart_policy:
-        condition: on-failure
-        delay: 5s
-        max_attempts: 3
-        window: 120s
+        condition: always
   nginx:
     image: nginx:alpine
     deploy:
       restart_policy:
-        condition: on-failure
-        delay: 5s
-        max_attempts: 3
-        window: 120s
+        condition: always
