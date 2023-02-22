@@ -3,7 +3,7 @@
 _import "/install/docker.sh"
 _import "/install/packages.sh"
 
-install() {
-  installPackages
-  installDocker
+_install() {
+  _install-packages
+  _install-docker
 }
