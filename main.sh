@@ -8,12 +8,15 @@ _import "/commands/get-new-certificate.sh"
 _printIntro
 _line
 _option "1" "Install"
-_option "2" "Install xray config"
+_option "2" "Install Xray config"
 _option "3" "Get new certificate"
+_option "4" "Restart Xray"
+_option "5" "Restart Nginx"
 _option "0" "Exit"
 _emptyRow
 
 # _option "2" "Remove"
+# _option "4" "Renew existing certificate"
 # _option "4" "Renew existing certificate"
 
 read -p "Please select one of the options [number]: " OPTION_NUMBER
@@ -30,6 +33,12 @@ case "${OPTION_NUMBER}" in
   ;;
 3)
   _get-new-certificate
+  ;;
+4)
+  docker compose restart xray
+  ;;
+5)
+  docker compose restart nginx
   ;;
 *)
   _warn "Not found in options"
