@@ -1,7 +1,7 @@
 #!/bin/bash
 
 _install-xray-config() {
-  local xrayConfigFile="~/xray/config.json"
+  local xrayConfigFile="$HOME/xray/config.json"
   if [[ -f "$xrayConfigFile" ]]; then
     mkdir -p /etc/xray
     cp $xrayConfigFile /etc/xray/config.json
