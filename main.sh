@@ -1,7 +1,6 @@
 #!/bin/bash
 source "$(dirname "$BASH_SOURCE")/common/helpers.sh"
 
-_import "/configs/acme.sh"
 _import "/commands/run.sh"
 _import "/commands/install-xray-config.sh"
 
