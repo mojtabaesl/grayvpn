@@ -1,5 +1,7 @@
 #!/bin/bash
 
+_import "/common/helpers.sh"
+
 _install-xray-config() {
   local xrayConfigFile="$HOME/configs/config.json"
   if [[ -f "$xrayConfigFile" ]]; then

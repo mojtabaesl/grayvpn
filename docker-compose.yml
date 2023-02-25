@@ -11,6 +11,8 @@ services:
         condition: always
   nginx:
     image: nginx:alpine
+    volumes:
+      - /root/www:/usr/share/nginx/html
     deploy:
       restart_policy:
         condition: always

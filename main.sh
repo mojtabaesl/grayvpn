@@ -12,12 +12,14 @@ _option "2" "Install Xray config"
 _option "3" "Get new certificate"
 _option "4" "Restart Xray"
 _option "5" "Restart Nginx"
+_option "6" "Generate subscription files"
+_option "7" "Install subscription files"
 _option "0" "Exit"
 _emptyRow
 
-# _option "2" "Remove"
-# _option "4" "Renew existing certificate"
-# _option "4" "Renew existing certificate"
+# _option "?" "Remove"
+# _option "?" "Renew existing certificate"
+# _option "?" "Renew existing certificate"
 
 read -p "Please select one of the options [number]: " OPTION_NUMBER
 
@@ -39,6 +41,12 @@ case "${OPTION_NUMBER}" in
   ;;
 5)
   docker compose restart nginx
+  ;;
+6)
+  node generateSubLinks.mjs
+  ;;
+7)
+  cp -R ./export/subs/* $HOME/www
   ;;
 *)
   _warn "Not found in options"
