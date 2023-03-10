@@ -12,3 +12,18 @@ export FULLCHAIN_FILE=
 
 # Private key file name. default: private.key
 export KEY_FILE=
+
+# JsonBin master key
+export MASTER_KEY=
+
+# JsonBin access key
+export ACCESS_KEY=
+
+# JsonBin users bin id
+export USERS_BIN_ID=
+
+# JsonBin xray config bin id
+export XRAY_BIN_ID=
+
+# JsonBin xray config bin id
+export PLAN=
