@@ -4,6 +4,7 @@ source "$(dirname "$BASH_SOURCE")/common/helpers.sh"
 _import "/commands/run.sh"
 _import "/commands/install-xray-config.sh"
 _import "/commands/get-new-certificate.sh"
+_import "/guards/check-configs.sh"
 
 _main() {
   _printIntro
@@ -13,7 +14,7 @@ _main() {
   _option "3" "Get new certificate"
   _option "4" "Restart Xray"
   _option "5" "Restart Nginx"
-  _option "6" "Generate subscription files"
+  _option "6" "Generate subscription files and xray config"
   _option "7" "Install subscription files"
   _option "0" "Exit"
   _emptyRow
@@ -45,8 +46,10 @@ _main() {
     docker compose restart nginx
     ;;
   6)
+    _check-configs
     rm -rf ./export
-    node generateConfigs.mjs
+    PLAN=$PLAN MASTER_KEY=$MASTER_KEY ACCESS_KEY=$ACCESS_KEY node generateConfigs.mjs
+    _success "Generating sub link files was successful"
     ;;
   7)
     cp -R ./export/subs/* $HOME/www
