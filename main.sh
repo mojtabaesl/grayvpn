@@ -6,8 +6,9 @@ _import "/commands/install-xray-config.sh"
 _import "/commands/get-new-certificate.sh"
 _import "/guards/check-configs.sh"
 
+_printIntro
+
 _main() {
-  _printIntro
   _line
   _option "1" "Install"
   _option "2" "Install Xray config"
