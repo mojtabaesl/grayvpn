@@ -34,7 +34,9 @@ async function generateXrayConfigFile(
   let xrayConfig = xrayConfigTemplate;
 
   users.forEach((user) => {
-    if (!user.active && user.plan !== plan) return;
+    if (!user.active) return;
+    if (plan === "paid" && user.plan !== "paid") return;
+
     const client = {
       id: user?.uuid,
       level: 0,
