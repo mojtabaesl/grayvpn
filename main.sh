@@ -53,6 +53,7 @@ _main() {
     _success "Generating sub link files was successful"
     ;;
   7)
+    rm $HOME/www/*.txt
     cp -R ./export/subs/* $HOME/www
     _success "Installing sub link files was successful"
     ;;

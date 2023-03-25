@@ -27,3 +27,6 @@ export XRAY_BIN_ID=
 
 # JsonBin xray config bin id
 export PLAN=
+
+# server name
+export SERVER_NAME=

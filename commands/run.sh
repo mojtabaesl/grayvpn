@@ -11,7 +11,6 @@ _run() {
   _line
   _install
   _line
-  _install-xray-config
   _install-www
   _line
   _get-certificate
